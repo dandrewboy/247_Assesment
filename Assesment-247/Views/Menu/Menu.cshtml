@@ -1,0 +1,49 @@
+﻿@model Assesment_247.Models.Menu
+
+@{
+    ViewData["Title"] = "Menu";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Menu</h1>
+
+<h4>Menu</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="MenuReturn">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="name" class="control-label"></label>
+                <input asp-for="name" class="form-control" />
+                <span asp-validation-for="name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="calories" class="control-label"></label>
+                <input asp-for="calories" class="form-control" />
+                <span asp-validation-for="calories" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ingredient1" class="control-label"></label>
+                <input asp-for="ingredient1" class="form-control" />
+                <span asp-validation-for="ingredient1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ingredient2" class="control-label"></label>
+                <input asp-for="ingredient2" class="form-control" />
+                <span asp-validation-for="ingredient2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Submit" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,45 @@
+﻿@model Assesment_247.Models.Menu
+
+@{
+    ViewData["Title"] = "MenuReturn";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>MenuReturn</h1>
+
+<div>
+    <h4>Menu</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.calories)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.calories)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ingredient1)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ingredient1)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ingredient2)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ingredient2)
+        </dd>
+    </dl>
+</div>
+@Html.Raw(ViewBag.r1) <br/>
+@Html.Raw(ViewBag.r2)
+<div>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    <a asp-action="Index">Back to List</a>
+</div>
